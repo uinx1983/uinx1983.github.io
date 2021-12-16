@@ -2,14 +2,14 @@
 
 ![logo](https://uinx1983.github.io/img/icon.svg)
 
-# docsify <small>3.5</small>
+# 网络编程技术应用  <small>课程资料平台</small>
 
-> A magical documentation site generator.
+> 知识点、练习解析等内容
 
-- Simple and lightweight
-- No statically built html files
-- Multiple themes
+- 教师：黄磊、刘晓蓉
+- 试用专业：信息安全技术应用
+- 成都工业职业技术学院
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
+[学院官网](https://www.cdivtc.edu.cn)
+[开始学习](#概述)
 
