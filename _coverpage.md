@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](D:\Program Files\Typora\_media\icon.svg)
+![logo](https://uinx1983.github.io/img/icon.svg)
 
 # docsify <small>3.5</small>
 
