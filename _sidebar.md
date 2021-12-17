@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-<div class="sidebar">
+<div class="sidebar-content">
 
 * [概述](/)
 * [课程安排](guide.md)
