@@ -1,19 +1,10 @@
 # 概述
 
-> 引用
+本平台用于辅助学习《网络编程技术应用》课程。
 
-- [ ] 未完成任务
+有任务问题请联系15503-信息安全教研室 黄磊老师。
 
-- [x] 完成的任务
+版权说明
 
-[^footnote]: Here is the *text* of the **footnote**.
-
-You can create footnotes like this[^footnote].
-
-<video src="xxx.mp4" />
-
-
-
-# 标题一
 新的内容
 
