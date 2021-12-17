@@ -18,23 +18,23 @@
       loadSidebar: true,
       //loadNavbar: true,
       coverpage: true,
-      loadFooter: '_footer.md',
+      //loadFooter: '_footer.md',
       search: 'auto', // default
 
       search : [
         '/',            // => /README.md
-        '/guide',       // => /guide.md
-        '/get-started', // => /get-started.md
-        '/zh-cn/',      // => /zh-cn/README.md
+        //'/guide',       // => /guide.md
+        //'/get-started', // => /get-started.md
+        //'/zh-cn/',      // => /zh-cn/README.md
       ],
-      placeholder: 'start to search',
-      placeholder: {
-        '/': '搜索'
+      search: {
+        placeholder: '搜索',
+        noData: '找不到结果！',
+        depth: 2 // Headline depth, 1 - 6
       },
-      noData: {
-        '/': '找不到结果！'
-      },
-      depth: 2 // Headline depth, 1 - 6
+      plugins: [
+      EditOnGithubPlugin.create('https://github.com/uinx1983/uinx1983.github.io/', null, '编辑该页面')
+    ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -42,7 +42,9 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.js"></script>
   <!--代码块复制按钮-->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!--右上角edit on github-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <!--footer-->
-  <script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
+  <!--<script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>-->
 </body>
 </html>
