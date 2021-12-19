@@ -74,13 +74,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 - 专业的 [PyCharm](https://www.jetbrains.com/pycharm/)
 - 通用的 [VSCode](https://code.visualstudio.com/)
 
-### 4 在线编辑器
+### 4 其他
 
-### 5 其他
+有些python编程环境集成了许多有用的库，方便我们学习图表、大数据、人工智能等内容，比如 [**Jupyter Notebooks**](https://jupyter.org/) 
 
-# 练习
 
-1. 编写一个基本的python代码文件，并正常运行
 
 
 
