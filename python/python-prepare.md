@@ -76,7 +76,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ### 4 其他
 
-有些python编程环境集成了许多有用的库，方便我们学习图表、大数据、人工智能等内容，比如 [**Jupyter Notebooks**](https://jupyter.org/) 
+有些python编程环境集成了许多有用的库，方便我们学习图表、大数据、人工智能等内容，比如 [Jupyter Notebooks](https://jupyter.org/) 
 
 
 
