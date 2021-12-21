@@ -4,6 +4,7 @@
     - [Hello World](#hello-world)
     - [变量](#变量)
     - [运行程序](#运行程序)
+    - [基础计算](#基础计算)
 - [项目](#项目)
 ---
 # 知识点总结
@@ -44,7 +45,58 @@ print(f"integer i is {i}!")
 2. 格式化打印，在打印字符串前加前缀`f`，变量放`{}`里（这种用法比较直观，但print函数还有其他的方式实现该功能）
 
 ### 运行程序
+> Python是解释型语言，不需要编译后运行
 
+保存代码文件，例如`test.py`，在命令行中运行命令`python test.py`。
+```sh
+C:\Users\huanglei\Desktop>python test.py
+integer i is 0!
+```
+1. 解释型语言不需要编译就能运行，但需要系统中有相应解释器（安装Python软件时已安装好）
+2. Python代码文件的后缀名为py
+
+### 基础计算
+> 在Python中数字、字符、字符串的操作和大部分现代语言类似，非常简单
+
+数字：
+```python
+i=3+4
+j=5*6
+print("i的值为",i)
+print("j的值为",j)
+print("i除j为",i/j)
+print("i除j取整为",i//j)
+print("i的j次方为",i**j)
+```
+运行结果:
+```sh
+C:\Users\huanglei\Desktop>python test.py
+i的值为 7
+j的值为 30
+i除j为 0.23333333333333334
+i除j取整为 0
+i的j次方为 22539340290692258087863249
+```
+1. 普通的`+、-、*、/、%`等操作
+2. 特殊的`**`乘方操作，`//`取整除法
+
+字符串：
+```python
+print(3 * 'un' + 'ium')
+print("u"+'m')
+print("word"[0])
+```
+运行结果：
+```sh
+C:\Users\huanglei\Desktop>python test.py
+unununium
+um
+w
+```
+1. 字符串可以用`+`合并（粘到一起），也可以用`*`重复
+2. Python中没有严格的字符概念，字符被当作字符串处理
+3. 无论是`''`还是`""`都可以用做字符串的符号（他们的区别请查阅[Python 速览-字符串](https://docs.python.org/zh-cn/3/tutorial/introduction.html#id2)）
+4. 字符串是数组，可以用`[编号]`获取字符，编号从0开始
 
 # 项目
 1. 基础项目（必做，老师的演示）
