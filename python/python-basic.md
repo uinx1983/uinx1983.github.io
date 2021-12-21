@@ -104,5 +104,5 @@ w
     - 完成[基础练习-1](python/lab/lab-1.md)
 
 2. 综合项目（二选一，分组完成）
-    - 简单的项目
-    - 复杂的项目
+    - 难度稍低[综合项目-1-查找](python/problem/problem-1-find.md)
+    - 难度稍高[综合项目-1-验证合法性](python/problem/problem-1-verify.md)
