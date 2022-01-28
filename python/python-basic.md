@@ -52,6 +52,7 @@ print(f"integer i is {i}!")
 C:\Users\huanglei\Desktop>python test.py
 integer i is 0!
 ```
+总结：
 1. 解释型语言不需要编译就能运行，但需要系统中有相应解释器（安装Python软件时已安装好）
 2. Python代码文件的后缀名为py
 
@@ -77,6 +78,7 @@ i除j为 0.23333333333333334
 i除j取整为 0
 i的j次方为 22539340290692258087863249
 ```
+总结：
 1. 普通的`+、-、*、/、%`等操作
 2. 特殊的`**`乘方操作，`//`取整除法
 
@@ -84,7 +86,6 @@ i的j次方为 22539340290692258087863249
 ```python
 print(3 * 'un' + 'ium')
 print("u"+'m')
-print("word"[0])
 ```
 运行结果：
 ```sh
@@ -93,16 +94,20 @@ unununium
 um
 w
 ```
+总结：
 1. 字符串可以用`+`合并（粘到一起），也可以用`*`重复
 2. Python中没有严格的字符概念，字符被当作字符串处理
 3. 无论是`''`还是`""`都可以用做字符串的符号（他们的区别请查阅[Python 速览-字符串](https://docs.python.org/zh-cn/3/tutorial/introduction.html#id2)）
-4. 字符串是数组，可以用`[编号]`获取字符，编号从0开始
 
 # 练习
 1. 基础练习（必做，个人完成）
 
     - 完成[基础练习-1](python/lab/lab-1.md)
 
+<!--暂时取消
 2. 综合项目（二选一，分组完成）
     - 难度稍低[综合项目-1-查找](python/problem/problem-1-find.md)
     - 难度稍高[综合项目-1-验证合法性](python/problem/problem-1-verify.md)
+-->
+
+

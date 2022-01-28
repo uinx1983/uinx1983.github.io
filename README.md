@@ -32,7 +32,7 @@ Mysql：
 
 
 
-# 版权
+# 版权说明
 
 网站使用了 [docsify](https://docsify.js.org/) 开源项目搭建。
 
