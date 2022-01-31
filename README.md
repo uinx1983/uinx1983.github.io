@@ -34,9 +34,13 @@ Mysql：
 
 # 版权说明
 
+Copyright ©2022 黄磊,刘晓蓉 版权所有
+
+联系邮箱：56726563@qq.com
+
 网站使用了 [docsify](https://docsify.js.org/) 开源项目搭建。
 
-网站内容遵循 [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) 知识共享许可协议。
+网站内容遵循 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 知识共享许可协议。
 
 
 
