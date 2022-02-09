@@ -14,10 +14,10 @@
 ### 布尔值
 > “布尔”数据类型只有两种值：True 和 False。
 ```python
-#1
+# 定义变量 x 为布尔值
 x=True
 print('x变量的值为：',x)
-#2
+# 打印变量 x 的类型
 print('x变量的类型为：',type(x))
 if(x):
     print('布尔值常用于条件判断')
@@ -30,7 +30,7 @@ x变量的类型为： <class 'bool'>
 ```
 总结：
 1. 注意首字母一定要大写
-2. bool类型，也就是布尔值
+2. 布尔值的类型为 bool
 
 ### 比较操作符
 > “比较操作符”比较两个值，求值为一个布尔值。
@@ -47,19 +47,23 @@ x变量的类型为： <class 'bool'>
 | >=     | 大于等于 |
 
 ```python
-#1
+# == 等于
 print('42 == 42 的值是',42 == 42)
+# != 不等于
 print('2 != 3 的值是',2 != 3)
+# 比较字符串
 print("'hello' == 'hello' 的值是",'hello' == 'hello')
 print("'hello' == 'Hello' 的值是",'hello' == 'Hello')
+# 比较布尔值
 print('True == True 的值是',True == True)
-#2
+# 比较整数和浮点数是否相等
 print('42 == 42.0 的值是',42 == 42.0)
-#3
+# 比较数字和字符串是否相等
 print("97 == 'a' 的值是",97 == 'a')
-#4
+# 比较字符串大小
 print("'hello' > 'Hello'",'hello' > 'Hello')
 print("'狗' > '猫' 的值是",'dog' > 'cat')
+# 比较字符串和数字的大小
 print("'狗' > 45 的值是",'狗' > 45)
 ```
 运行结果：
@@ -88,16 +92,17 @@ TypeError: '>' not supported between instances of 'str' and 'int'
 ### 布尔操作符
 > 像比较操作符一样，"布尔操作符"将这些表达式求值为一个布尔值。
 ```python
-#1
+# 与运算
 print(True and True)
-#2
 print(0 and 1)
+# 或运算
 print(True or 0)
+# 反运算
 print(not 0)
 print(not not 0)
-#3
+# 混合运算
 print(True and not 0)
-#4
+# 其他类型的值进行布尔运算
 print(1 and 2)
 print(2 and 1)
 print(True and 2)
@@ -262,20 +267,20 @@ for num in range(2, 10):
 > 除了内置的基本函数，比如print()、input()等，在使用 Python 提供的标注库或者第三方库之前，必须用 import 语句导入该模块。
 
 ```python
-#1
+# 导入 random 模块
 import random
 for i in range(2):
     print(random.randint(1, 10))
-#2
+# 导入 random 模块中的 randint 函数
 from random import randint
 for i in range(2):
     print(randint(1, 10))
-#3
+# 导入 math 模块，并取名为 m
 import math as m
 print(m.sqrt(5))
-#4
+# 导入多个模块
 import random, sys, os, math
-#5
+# 导入 math 模块的所有函数
 from math import *
 print('取对数:',log2(32))
 print('最大公约数:',gcd(45, 69))
@@ -291,11 +296,11 @@ print('最大公约数:',gcd(45, 69))
 最大公约数: 3
 ```
 总结：
-1. import random 导入整个random库，库里的所有函数都可以使用
-2. from random import randint 导入指定的函数，使用时不用写库名
+1. import random 导入整个random模块，模块里的所有函数都可以使用
+2. from random import randint 导入指定的函数，使用时不用写模块名
 3. 导入时，可以用as关键字取别名，方便使用
-4. 可以用逗号分隔，一行导入多个库
-5. from math import * 导入math库的所有函数，使用时不用写库名，但大型项目中不推荐用该方式，因为可能导致函数名重复
+4. 可以用逗号分隔，一行导入多个模块
+5. from math import * 导入math模块的所有函数，使用时不用写模块名，但大型项目中不推荐用该方式，因为可能导致函数名重复
 6. 导入可以放在代码中间（解释型语言特性决定的）
 7. Python 的标准库中有许多有用的模块，比如 math 模块有数学运算相关的函数，random 模块有随机数相关的函数，等等。
 

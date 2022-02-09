@@ -30,7 +30,7 @@ C:\python\lab>python lab-1.py
 显示转换后的信息
 ```
 代码结构
-```
+```python
 print(提示信息)
 miles=input(提示英里信息)
 KM=公式计算

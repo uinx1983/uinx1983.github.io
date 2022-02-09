@@ -49,12 +49,13 @@ print(f"integer i is {i}!")
 
 保存代码文件，例如`test.py`，在命令行中运行命令`python test.py`。
 ```sh
-C:\Users\huanglei\Desktop>python test.py
+C:\python>python test.py
 integer i is 0!
 ```
 总结：
 1. 解释型语言不需要编译就能运行，但需要系统中有相应解释器（安装Python软件时已安装好）
 2. Python代码文件的后缀名为py
+3. 如果提示未找到文件，请先使用`cd`命令切换到代码文件所在的目录中，再运行。
 
 ### 基础计算
 > 在Python中数字、字符、字符串的操作和大部分现代语言类似
@@ -71,7 +72,7 @@ print("i的j次方为",i**j)
 ```
 运行结果:
 ```sh
-C:\Users\huanglei\Desktop>python test.py
+C:\python>python test.py
 i的值为 7
 j的值为 30
 i除j为 0.23333333333333334
@@ -89,7 +90,7 @@ print("u"+'m')
 ```
 运行结果：
 ```sh
-C:\Users\huanglei\Desktop>python test.py
+C:\python>python test.py
 unununium
 um
 w
