@@ -27,7 +27,7 @@ print(f'列表中水果最后一个元素是:{things[0][-1]}')
 print('pets列表前2个元素的列表是：',pets[0:2])
 print('pets列表第1个元素之后的列表是：',pets[1:])
 print('pets列表倒数2个元素的列表是：',pets[-3:-1])
-# 列表的长度
+# len() 函数获取列表的长度
 print('pets列表的长度是：',len(pets))
 # 列表改变元素值
 pets[0]='仓鼠'
