@@ -94,7 +94,7 @@ if('字符' in '字符串'):
 
 ####  join() 和 split() 方法
 ```python
-
+join()
 ```
 运行结果：
 ```sh
