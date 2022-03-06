@@ -310,5 +310,5 @@ print('最大公约数:',gcd(45, 69))
     - 完成[基础练习-2](/python/lab/lab-2.md)
 
 2. 综合项目（二选一，分组完成）
-    - 难度稍低[综合项目-1-整除](/python/problem/problem-1-divide.md)
-    - 难度稍高[综合项目-1-用户登录](/python/problem/problem-1-login.md)
+    - 难度稍低[综合项目-1-用户登录](/python/problem/problem-1-login.md)
+    - 难度稍高[综合项目-1-整除](/python/problem/problem-1-divide.md)

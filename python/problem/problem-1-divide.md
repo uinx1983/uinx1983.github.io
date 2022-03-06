@@ -34,7 +34,7 @@ c:\python\problem>python problem-1-divide.py
 分情况处理，整除时如何，不能整除时如何，什么时候换行
 ```
 代码结构
-```
+```python
 除数变量=用户输入
 print(提示信息)
 换行计数变量=初始值

@@ -23,7 +23,7 @@ d:\python\problem>python problem-1-find.py
 分别输出信息
 ```
 代码结构
-```
+```python
 info=input(提示信息)
 info_array=info.split(分隔符)
 print(姓名信息)

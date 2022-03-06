@@ -72,41 +72,97 @@ if('字符' in '字符串'):
 
 #### upper()、lower()、isupper()和 islower()方法
 ```python
-
+text='This is a 例子。'
+# 转换为大写
+print(text.upper())
+# 转换为小写
+print(text.lower())
+# 判断是否大写
+print(text.isupper())
+print('THIS'.isupper())
+# 判断是否小写
+print(text.islower())
+print('this'.islower())
 ```
 运行结果：
 ```sh
-
+THIS IS A 例子。
+this is a 例子。
+False
+True
+False
+True
 ```
-- keys()、values()、items() 用法类似，用于获取某种元素的集合
-- 它们都常用于循环
+- 大小写转换，只对英文字符起作用
+- 大小写判断，字符串的所有字符都要参与，但除了英文字母，其他语言的字符程序无法判断大小写，所以都判断为 False
 
-#### isX 等方法
+#### isX 等方法判断字符类型
 ```python
-
+# 字符串只包含英文字母，并且非空
+print('this'.isalpha())
+print('this is'.isalpha())
+print('这是'.isalpha())
+# 字符串是数字，并且非空
+print('123'.isdecimal())
+# 如果想让中文数字也起作用，可以用isnumeric
+print('一百二十三'.isnumeric())
 ```
 运行结果：
 ```sh
-
+True
+False
+True
+True
+True
 ```
-- in 关键字可以判断字典是否包含某个 `键`
-- 利用 values() 判断字典是否包含某个 `值`
+- 相关方法主要用于判断英文字母和阿拉伯数字
 
 ####  join() 和 split() 方法
 ```python
-join()
+# 使用字符串把多个字符串连接起来
+a=','.join(['猫','狗','鸟'])
+b='还是'.join(['猫','狗','鸟'])
+print(a)
+print(b)
+# 使用字符串把字符串分隔为一个列表，默认是空格分隔
+c='This is a 例子。'.split()
+d='猫,狗,鸟'.split(',')
+print(c)
+print(d)
 ```
 运行结果：
 ```sh
-
+猫,狗,鸟
+猫还是狗还是鸟
+['This', 'is', 'a', '例子。']
+['猫', '狗', '鸟']
 ```
-- 字典取值时，可以用 get() 方法避免出现相应错误
-
-#### startswith()和 endswith() 方法
-
-#### 用 rjust()、ljust()和 center() 对齐文本
+- join 方法把内容连接起来
+- split 方法把内容分隔开来
 
 #### 用 strip()、rstrip()和 lstrip() 删除多余字符
+```python
+# 删除首尾的空白字符(包括空格，换行，制表符)
+print(' 前后有空格 '.strip())
+print('\t前后有制表符\t'.strip())
+print('\n前后有换行\n'.strip())
+# 删除首尾的特定字符串
+print('开始内容开始'.strip('开始'))
+# 删除左边的符号
+print(' 左边空格 '.lstrip())
+# 删除右边的符号
+print(' 右边空格 '.rstrip())
+```
+运行结果：
+```sh
+前后有空格
+前后有制表符
+前后有换行
+内容
+左边空格 
+ 右边空格
+```
+- 这些方法在处理用户输入时比较常用，可以有效的去掉用户不小心输入的空格
 
 # 练习
 1. 基础练习（必做，个人完成）
@@ -114,5 +170,5 @@ join()
     - 完成[基础练习-6](/python/lab/lab-6.md)
 
 2. 综合项目（二选一，分组完成）
-    - 难度稍低[综合项目-3-加密与解密](/python/problem/problem-3-caesar.md)
-    - 难度稍高[综合项目-3-敏感词过滤](/python/problem/problem-3-filter.md)
+    - 难度稍低[综合项目-3-敏感词过滤](/python/problem/problem-3-filter.md)
+    - 难度稍高[综合项目-3-维吉尼亚加密](/python/problem/problem-3-vigenere.md)

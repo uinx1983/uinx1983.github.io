@@ -30,7 +30,7 @@ c:\python\problem>python problem-2-roll.py
 判断是否中弹，否则下一轮，是则游戏结束
 ```
 代码结构
-```
+```python
 import random
 #空弹夹，0表示没子弹，1表示有子弹
 bullets=[0,0,0,0,0,0]

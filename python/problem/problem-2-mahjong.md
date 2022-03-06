@@ -31,7 +31,7 @@ c:\python\problem>python problem-2-mahjong.py
 显示手牌
 ```
 代码结构
-```
+```python
 # 导入随机模块
 import random
 
