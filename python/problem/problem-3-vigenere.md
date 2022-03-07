@@ -3,7 +3,7 @@
 ### 目标
 写一个程序实现维吉尼亚加密。
 维吉尼亚密码是使用一系列`凯撒密码`组成密码字母表的加密算法，属于多表密码的一种简单形式。简单易用，同时初学者难以破解。
-如：其中 pizza 是密钥，i have a dream 是需要加密的字符串
+如下例所示：其中 pizza 是密钥，i have a dream 是需要加密的字符串
 ```sh
 c:\python\problem>python problem-3-vigenere.py pizza "i have a dream"
 i have a dream 通过密钥 pizza 加密后为 x pzue p lqdab
