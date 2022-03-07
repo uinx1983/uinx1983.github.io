@@ -3,8 +3,7 @@
 ### 目标
 写一个程序，实现对用户输入的内容，进行敏感词过滤，并输出过滤后的内容。比如：
 ```sh
-c:\python\problem>python problem-3-filter.py 
-"你是个傻子"
+c:\python\problem>python problem-3-filter.py "你是个傻子"
 你是个*子
 ```
 
