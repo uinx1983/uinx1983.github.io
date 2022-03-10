@@ -30,7 +30,7 @@ import re
 # 判断用户名合法性函数，字母、下划线、数字组成，至少4位，最多20位长
 def userValid(username):
     nameRe = re.compile(r'[a-zA-z_]\w{3,20}')
-    if(nameRe.fullmatch(username)):
+    if(nameRe.match(username)):
         return True
     else:
         return False
@@ -71,6 +71,7 @@ while True:
 
 ### 提示信息
 - 可以尝试自己写规则，更方便的是网上找现成的规则
+- 如果找到的规则不是完全符合任务的要求，也可以先使用试试
 
 ### 验证程序
 运行程序，输入相应的信息，检查输出内容是否符合要求
