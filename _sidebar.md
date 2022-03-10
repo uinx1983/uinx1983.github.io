@@ -10,6 +10,7 @@
 * [04 列表](/python/python-list.md)
 * [05 字典和结构化数据](/python/python-dictionary.md)
 * [06 字符串操作](/python/python-string.md)
+* [07 正则表达式](/python/python-regex.md)
 * [...未完待续](#)
 
 <div>
