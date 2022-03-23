@@ -3,7 +3,7 @@
 ### 目标
 假设一个怪物的战利品会掉落多个，表示为这样的字符串列表：drop_item = ['金币', '匕首', '金币', '金币', '红宝石']
 
-写一个名为 addToInventory(inventory, addedItems) 的函数，其中 inventory 参数是一个字典，表示玩家背包中的物品清单，addedItems 参数是一个列表，就像 drop_item。addToInventory()函数把传入的战利品清单，更新到玩家的背包中，并返回 inventory 字典。
+写一个名为 addToInventory(inventory, addedItems) 的函数，其中 inventory 参数是一个字典，表示玩家背包中的物品清单，addedItems 参数是一个列表，表示需要添加的战利品。addToInventory()函数把传入的战利品清单，更新到玩家的背包中，并返回 inventory 字典。
 
 再写一个名为 displayInventory(inventory) 的函数，把玩家背包里的物品列出来。
 

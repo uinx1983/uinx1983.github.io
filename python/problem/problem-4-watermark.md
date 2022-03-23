@@ -7,7 +7,7 @@
 
 原文件：
 
-![原文件](https://uinx1983.github.io/img/p4-opic.png)
+![原文件](https://uinx1983.github.io/img/p4-opic.jpg)
 
 新文件：
 
