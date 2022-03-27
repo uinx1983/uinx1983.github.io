@@ -73,7 +73,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 > 文本编辑器最大好处是所有操作系统都自带
 
-虽然windows自带了文本编辑器，但是并不推荐使用它，因为windows的默认字符编码不是utf-8，对中文的支持并不友好。
+虽然windows自带了文本编辑器，但是并不推荐使用它，因为windows 7及之前版本的默认字符编码不是utf-8，对中文的支持并不友好。
 
 建议使用如[sublime-text](http://www.sublimetext.com/)、[Notepad++ ](https://notepad-plus-plus.org/) 等流行的文本编辑器
 
@@ -81,6 +81,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 > 如果需要更方便的编程，IDE是更好的选择，IDE集成了文件管理、排错、控制台等多种功能
 
+根据需要选择：
 - Python自带的 IDLE
 - 专业的 [PyCharm](https://www.jetbrains.com/pycharm/)
 - 通用的 [VSCode](https://code.visualstudio.com/)

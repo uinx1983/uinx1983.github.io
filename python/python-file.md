@@ -26,7 +26,7 @@ filename='lab-1.py'
 
 #### 绝对路径和相对路径
 ```python
-# 比如程序在c:\python\lab-1.py,那么和程序同一文件夹的文件test.text，可以如下2中表示
+# 比如程序在c:\python\lab-1.py,那么和程序同一文件夹的文件test.text，可以如下两种表示
 # 绝对路径
 path='c:\\python\\test.txt'
 # 相对路径
@@ -116,6 +116,7 @@ newfile.close()
 
 ### 文件管理
 > 除了读写内容，我们经常会操作文件本身，比如新建、改名、复制、移动等
+
 > os 和 shutil 模块常用于文件管理
 
 #### 复制

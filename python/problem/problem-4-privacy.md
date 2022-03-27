@@ -14,7 +14,7 @@
 
 **注意**:文件中涉及的相关信息是虚构的！
 
-**原文件下载**:[点击下载](https://uinx1983.github.io/problem/users.txt)
+**原文件下载**:[点击下载](https://uinx1983.github.io/python/problem/users.txt)
 
 ### 要求
 1. 手机号码需要把5到8位的数字替换为*

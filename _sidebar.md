@@ -12,6 +12,7 @@
 * [06 字符串操作](/python/python-string.md)
 * [07 正则表达式](/python/python-regex.md)
 * [08 读写文件](/python/python-file.md)
+* [09 HTML基础](/python/python-html.md)
 * [...未完待续](#)
 
 <div>
