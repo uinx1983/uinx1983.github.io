@@ -10,9 +10,8 @@
 2. 内容不要求多，关键是东西都要有
 3. 网页保存为 lab-9.html
 
-**示例网页[下载](https://uinx1983.github.io/python/lab/lab-sample.html)**
+**示例素材[下载](https://uinx1983.github.io/python/lab/lab-9.zip)**
 
-**配套样式文件[下载](https://uinx1983.github.io/python/lab/style.css)**
 
 ### 编程参考
 网页代码结构
