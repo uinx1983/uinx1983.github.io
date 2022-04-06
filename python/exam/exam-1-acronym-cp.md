@@ -17,7 +17,7 @@ most valuble person的尾字母缩写为TEN
 ### 编程参考
 程序流程图参考：
 
-![程序流程图参考](https://uinx1983.github.io/img/exam-1.png)
+![程序流程图参考](https://uinx1983.github.io/img/exam-1-cp.png)
 
 ### 提示信息
 - 字符串.split(分隔符) 方法：可以把字符串内容通过分隔符，分隔为一个列表
