@@ -6,6 +6,7 @@
 
 * 掌握 HTTP 协议的基本逻辑
 * 掌握 requests 模块的基本用法
+* 掌握 xpath 的基本用法
 * 掌握 Beautiful Soup 模块的基本用法
 * 练习
 
@@ -32,7 +33,7 @@ if r.status_code==200:
 ```python
 import requests
 
-r = requests.get('https://python.study2m.com/#/python/python-html')
+r = requests.get('https://bing.com')
 
 if r.status_code==200:
     print(r.text)
@@ -79,8 +80,8 @@ print(r.url)
 ```
 - 发送的 get 请求，参数进行了传递，url也进行了正确的编码
 
-### 小练习
-把获取的网页内容，保存为一个 html 文件，并在浏览器打开
+### 讨论
+去豆瓣网站，找到‘豆瓣电影分类排行榜’中某一种电影类型的get请求地址
 
 ## 03. post 方法
 > post 方式主要用于提交信息，比如注册，登录等操作
@@ -96,133 +97,107 @@ print(r.text)
 - post 传递的数据可以是字典或者 json 格式
 - 现在网页设计越来越复杂，post 中经常用到了 javascript 等技术，数据交互也可能由多次完成，解析整个数据交互过程有很大难度
 
+## 04. xpath 获取网页元素
+> XPath 的意思是 XML 路径语言。HTML 是一种 XML 格式的文档，使用 XPath 可以方便的定位、获取元素
 
-## 04. 用 BeautifulSoup 模块解析 HTML
-在 c:\myweb 中创建一个文本文件 index.html ，编辑里面的内容
+```python
+import requests
+from lxml import etree
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>我的网站</title>
-    </head>
-    <body>
-        这是我的首页，什么内容都没有！
-    </body>
-</html>
-```
-- HTML 文件通常会以 .htm 或 .html 为扩展名
-- 如果有类似 index.html 的文件，网站会把这种文件当作首页显示
-- 也可以使用url地址访问指定的文件资源，http://localhost:8000/index.html
+# 定义网络地址:豆瓣新片榜
+url='https://movie.douban.com/chart'
+# 自定义请求的头部信息
+#headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36 Edg/100.0.1185.36'}
+# 发起网络请求，获取内容
+#html=requests.get(url,headers=headers)
+html=requests.get(url)
+# 强制转换编码为utf-8
+#html.encoding='utf-8'
+# 把获取的内容转换为xml对象
+xml=etree.HTML(html.text)
 
-### HTML文档解析
-> HTML 是一种相由不同元素组成的标记语言
-```html
-<!DOCTYPE html>
-```
-- 声明文档类型。记住现在的 HTML 网页文件都这样开头。
-```html
-<html>
-    ...
-</html>
-```
-- \<html\> 元素是页面的根元素
-- 每个元素都用一对开始和结束`标签`包裹
-- 每个标签以尖括号（<>）开始和结束
+# 在这个对象上应用xpath，取得标题所在的链接元素
+#//*[@id="content"]/div/div[1]/div/div/table/tr/td[2]/div/a
+hrefs=xml.xpath('//div[@class="pl2"]/a')
+for h in hrefs:
+    print(h.text)
+# 获取得分所在的元素
+stars=xml.xpath('//span[@class="rating_nums"]')
+for s in stars:
+    print(s.text)
 
-```html
-<head>
-    <meta charset="utf-8">
-    <title>我的网站</title>
-</head>
 ```
-- \<head\>元素。这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。
 
-```html
-<meta charset="utf-8">
-```
-- 元素中可以有`属性`，比如 charset="utf-8" 是 \<meta\> 元素的属性，属性是对元素信息的额外描述，不会直接显示在网页中
-- 一些特别的元素，可以不用结束标签
+- headers 定义的头部信息，有些网站必须有该内容才能正常访问
+- 有些时候网页获取的内容不能正确识别编码，需要用 encoding 指定
+- xpath 规则可以从浏览器工具辅助获取，但自己写的更简洁准确
 
-```html
-<title>我的网站</title>
-```
-- \<title\> 元素设置网页的标题，标签之间的文本，称为`内容`
+### XPath 基本语法汇总
+> xpath 的思想是通过 路径表达 去寻找节点。节点包括`元素`，`属性`，和`内容`
 
-```html
-<body>
-    这是我的首页，什么内容都没有！
-</body>
+- 路径表达式
 ```
-- \<body\>元素。包含了你访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。
+/   根节点，节点分隔符，
+//  任意位置
+.   当前节点
+..  父级节点
+@   属性
+```
+- 通配符
+```
+*   任意元素
+@*  任意属性
+node()  任意子节点（元素，属性，内容)
+```
+- 谓语(使用中括号来限定元素，称为谓语)
+```
+//a[n] n为大于零的整数，代表子元素排在第n个位置的<a>元素
+//a[last()]   last()  代表子元素排在最后个位置的<a>元素
+//a[last()-]  和上面同理，代表倒数第二个
+//a[position()<3] 位置序号小于3，也就是前两个，这里我们可以看出xpath中的序列是从1开始
+//a[@href]    拥有href的<a>元素
+//a[@href='www.baidu.com']    href属性值为'www.baidu.com'的<a>元素
+//book[@price>2]   price值大于2的<book>元素
+```
 
 ### #小练习
-在网站的文件夹中，创建一个新的文件，比如 aboutme.html ，这里面写上个人介绍，通过浏览器访问该页面。
 
-### 更多的URL示例
+完成基础练习-10
 
-```sh
-# 网站首页，使用了https加密协议，使用了域名当作主机名
-https://www.baidu.com
-# 访问资源 http.server.html
-https://docs.python.org/zh-cn/3/library/http.server.html
-# 通过 search.html 页面传递数据给服务器，使用了3个参数：q，check_keywords，area
-https://docs.python.org/zh-cn/3/search.html?q=http&check_keywords=yes&area=default
+## 05. 用 BeautifulSoup 模块解析 HTML
+> 使用 xpath 获取一种内容比较容易，但操作复杂的文本还是不够方便，我们试试 BeautifulSoup 模块
+
+- 模块安装：pip install BeautifulSoup4
+- 模块调用：bs4
+```python
+import requests,bs4
+
+# 定义网络地址:豆瓣新片榜
+url='https://movie.douban.com/chart'
+headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36 Edg/100.0.1185.36'}
+# 发起网络请求，获取内容
+html=requests.get(url,headers=headers)
+# 强制转换编码为utf-8
+html.encoding='utf-8'
+# 把获取的内容转换为bs对象
+bs=bs4.BeautifulSoup(html.text,'lxml')
+
+# 使用选择器获取元素
+hrefs=bs.select('div[class="pl2"]')
+for h in hrefs:
+    name=h.a.contents[0].strip('/ ').strip()
+    rate=h.select('span[class="rating_nums"]')[0].text
+    print(f'电影名：{name}，评分：{rate}')
+
 ```
-- 网站的默认端口一般是 80，可以忽略不写
-- 现在大部分网站都是用了更安全的 https 协议
-- 域名和ip地址都可以当作主机
-- 动态资源可以通过传递不同的参数，获取不同的内容
-- 参数都是以`?`开始，参数之间是`&`符号隔开，`=`为参数赋值
-
-### 创建超链接
-> 网页中的超链接，把不同地方的文件资源，建立了关系，通过鼠标点击就可以访问
-
-修改首页的内容，添加到个人介绍页面的链接：
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>我的网站</title>
-    </head>
-    <body>
-        <a href='aboutme.html'>个人介绍</a>
-    </body>
-</html>
-```
-
-- \<a\> 元素是超链接
-- 标签中的内容，是超链接的文字
-- href 属性非常重要，属性值指向一个 URL 地址
-
-### 插入图片
-> 网页中有许多类型的多媒体，最基础的是图片
-
-为首页增加一张图片：
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>我的网站</title>
-    </head>
-    <body>
-        <p>
-        <a href='aboutme.html'>个人介绍</a>
-        </p>
-        <img src="dinosaur.jpg">>
-    </body>
-</html>
-```
-- \<p\> 元素是段落标记，放在里面的内容，是一个段落
-- \<img\> 元素是一个空元素，不需要包含文本内容或闭合标签，就像之前用过的 \<meta\> 元素
-- src 属性指向我们想要引入的图片的路径，可以是相对路径或绝对URL，这里的图片文件就和该网页文件在同一目录中
+- select() 方法称为选择器，通过元素的特点进行选择
+- 选择器的规则比xpath简单
+- 选择器获得的元素，可以方便的获取内容和属性
+- 选择器获取的元素，可以进一步操作获取子元素
 
 ### #小练习
-使用另外的图片，替换示例的图片，浏览器访问网页看看效果
+使用BeautifulSoup获取"豆瓣音乐排行榜"的歌曲名
 
-## 03. 练习
+## 06. 练习
 
-完成超星学习通上的练习
+完成综合项目:以小组为单位，选择一个目标网站，考虑要获取的内容，设计一个爬虫程序获取内容，并保存到一个文件中。
