@@ -8,6 +8,7 @@
 * 掌握 requests 模块的基本用法
 * 掌握 xpath 的基本用法
 * 掌握 Beautiful Soup 模块的基本用法
+* 掌握 JSON 数据的操作方法
 * 练习
 
 ## 01. HTTP 的 get 方法
@@ -198,6 +199,81 @@ for h in hrefs:
 ### #小练习
 使用BeautifulSoup获取"豆瓣音乐排行榜"的歌曲名
 
-## 06. 练习
+## 06. JSON数据
+> JSON 是 JavaScript 程序编写数据结构的原生方式，在当今网络中非常流行。通过 API 获取的数据大部分都是 JSON 数据。
 
-完成综合项目:以小组为单位，选择一个目标网站，考虑要获取的内容，设计一个爬虫程序获取内容，并保存到一个文件中。
+> 很多网站都提供 JSON 格式的内容，作为程序与网站交互的方式。这就是所谓的提供“应用程序编程接口（API）”。访问 API 和通过URL 访问任何其他网页是一样的。
+
+
+我们来看一个获取天气的例子：
+```python
+import requests
+import sys
+
+# 大部分 API 接口需要申请key才能使用
+key='525bdc3a99bf80086f0cc11433a1b50d'
+
+# 高德地图提供的天气查询接口
+r = requests.get(f'https://restapi.amap.com/v3/weather/weatherInfo?city=510100&key={key}')
+
+r.raise_for_status()
+
+# 把响应转换为JSON数据，也就是字典类型
+r=r.json()
+# 查询状态正常时，进一步处理数据
+if(r['status']=='1'):
+    天气=r['lives'][0]['weather']
+    气温=r['lives'][0]['temperature']
+else:
+    print('天气查询失败，请稍后再试')
+    sys.exit()
+
+print(f'今天成都 天气：{天气} 气温：{气温}')
+```
+- 利用 API，从网站获取原始数据，通常比通过网页解析 HTML 元素更方便
+- 弄清楚数据的结构，才能准确的获取想要的数据
+
+### #小练习
+去高德地图注册开发者帐号，申请一个 web服务 的key
+
+### 进一步
+> 我们再来看看城市查询接口，优化程序
+
+```python
+import requests
+import sys
+
+key='525bdc3a99bf80086f0cc11433a1b50d'
+
+# 使用另外的接口查询城市代码
+city=input('输入你想查询的城市：')
+city_r=requests.get(f'https://restapi.amap.com/v3/config/district?key={key}&keywords={city}&subdistrict=0')
+city_r.raise_for_status()
+city_r=city_r.json()
+if(city_r['status']=='1'):
+    city_code=city_r['districts'][0]['adcode']
+else:
+    print('城市查询失败，请稍后再试')
+    sys.exit()
+
+# 天气查询
+r = requests.get(f'https://restapi.amap.com/v3/weather/weatherInfo?city=510100&key={key}')
+r.raise_for_status()
+r=r.json()
+if(r['status']=='1'):
+    天气=r['lives'][0]['weather']
+    气温=r['lives'][0]['temperature']
+else:
+    print('天气查询失败，请稍后再试')
+    sys.exit()
+
+print(f'现在{city} 天气：{天气} 气温：{气温}')
+```
+
+### #小练习
+在天气例子的基础上，添加显示接下来三天的天气预报数据
+
+<!--## 07. 练习
+
+完成综合项目:以小组为单位，选择一个目标网站，考虑要获取哪些内容，设计一个爬虫程序获取内容，并保存到一个文件中。
+-->

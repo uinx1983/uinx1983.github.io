@@ -33,7 +33,8 @@ r = requests.post('https://httpbin.org/post', data={'key': 'value'})
 # 这种方式一般是 get 请求使用，为了方便参数的传递，通过变量来设置
 payload = {'key1': 'value1', 'key2': 'value2'}
 r = requests.get('https://httpbin.org/get', params=payload)
-
+# 确保返回了正常的响应
+r.raise_for_status()
 # 可以打印出 URL 看看，是这个样子 https://httpbin.org/get?key1=value2&key2=value2
 print(r.url)
 ```
@@ -45,6 +46,7 @@ print(r.url)
 import requests
 
 r = requests.get('https://api.github.com/events')
+r.raise_for_status()
 # r 是网络的响应信息，r.text 是信息的文本形式，打印出来看看
 print(r.text)
 # 大部分情况下程序能自动处理编码问题，但你可以看看响应的编码是什么
@@ -56,11 +58,52 @@ r.encoding = 'utf-8'
 ### 二进制形式读取原始数据
 > 网络上并不只是文本，还有文件、图片、视频等内容，使用文本读取不能正确处理这些数据
 
+```python
+from PIL import Image
+from io import BytesIO
+import requests
 
+r = requests.get('https://uinx1983.github.io/img/image-20211219140759903.png')
+r.raise_for_status()
+
+# 把二进制内容保存为图片文件，注意使用二进制模式
+imgFile = open('test.png', 'wb')
+# 可以直接写入文件，但不推荐该方式
+#imgFile.write(r.content)
+# 最好是采用如下循环的方式，一部分一部分的写入，因为网络资源有可能很大，一次写入会占用大量的内存
+for chunk in r.iter_content(128):
+    imgFile.write(chunk)
+# 也可以通过二进制形式读取出来，当作图片打开
+i = Image.open(BytesIO(r.content))
+# 显示图片
+i.show()
+
+```
+- r.content 是二进制形式数据
+
+### 处理JSON格式数据
+> 现在网络资源有很多通过API访问，JSON格式是主要使用的格式，Python能方便的帮你进行转换
+
+```python
+import requests
+
+r = requests.get('https://api.github.com/events')
+
+r.raise_for_status()
+
+# 获取JSON类型的响应
+j=r.json()
+
+# 获取其中的id值
+print(j["id"])
+```
+- r.json() 是JSON格式数据，操作方式和字典类似
 
 ## xpath
+它是一种用来确定XML文档中某部分位置的语言。关于xpath的资料，可以参考[百度百科](https://baike.baidu.com/item/XPath)的内容
 
 ## BeautifulSoup模块
+Beautiful Soup 是一个可以从HTML或XML文件中提取数据的Python库。可以参考[官方中文文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)
 
 # 练习
 1. 基础练习（必做，个人完成）
@@ -68,7 +111,6 @@ r.encoding = 'utf-8'
     - 完成[基础练习-10](/python/lab/lab-10.md)
 
 
-2. 综合项目（二选一，分组完成）
-    - 难度稍低[综合项目-3-敏感词过滤](/python/problem/problem-3-filter.md)
-    - 难度稍高[综合项目-3-维吉尼亚加密](/python/problem/problem-3-vigenere.md)
+2. 综合项目（分组完成）
+    - 以小组为单位，选择一个目标网站，考虑要获取哪些内容，设计一个爬虫程序获取内容，并保存到一个文件中。
 
