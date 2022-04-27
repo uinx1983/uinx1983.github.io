@@ -13,6 +13,7 @@
 * [07 正则表达式](/python/python-regex.md)
 * [08 读写文件](/python/python-file.md)
 * [09 HTML基础](/python/python-html.md)
+* [10 从 web 获取数据](/python/python-web.md)
 * [...未完待续](#)
 
 <div>
