@@ -64,6 +64,722 @@
 </style>
     </head>
     <body>
+        <div id="cc-main" style="min-height: 236px;">
+            <p class="weight-part-title"><span class="square"></span>班课数据和教学报告</p>
+        <div class="clear20"></div>
+        <div class="cc-data summary">
+            <p class="text-2">班课汇总/明细数据</p>
+            <p class="text-3">学生在班课中查阅资源、参与活动和签到等汇总<br>数据和明细数据</p>
+            <a style="color:#fff; text-decoration:none;" href="https://www.mosoteach.cn/web/index.php?c=export&amp;m=data_choose&amp;clazz_course_id=F407B939-1EA1-46F2-A501-98FA032CA380">
+                <button class="button-routine" style="border:1px solid #fff; color: #fff;  margin-top:18px;">前往导出...</button>
+            </a>
 
+        </div>
+        <div class="cc-data detail">
+            <p class="text-2">班课教学报告</p>
+            <p class="text-3">囊括教学周报、资源报告、活动报告和学情分析<br>等数据，用数据记录你的教学历程</p>
+                            <a style="color:#fff; text-decoration:none;" target="_blank" href="https://www.mosoteach.cn/web/index.php?c=clazzcourse&amp;m=report&amp;clazz_course_id=F407B939-1EA1-46F2-A501-98FA032CA380">
+                            <button class="button-routine" style="border:1px solid #fff; color: #fff; ">立即查看</button></a>
+        </div>
+        <div class="clear20"></div>
+                    <div class="clear-grey"></div>
+            <p class="weight-part-title"><span class="square"></span>学生学习报告与平时成绩</p>
+            <div class="learning-report cl">
+                <div class="learning-report-left">
+                    <input type="" placeholder="搜索姓名或学号" class="search-student-box">
+                    <div class="learning-report-left-head">
+                        <span class="item-head item-w-1">序号</span>
+                        <span class="item-head item-w-2" id="student-no">成员（学号）<span class="head-item-icon head-item-icon-default"></span></span>
+                        <span class="item-head item-w-3" id="stu-experience" data-sort="0">经验值<span class="head-item-icon head-item-icon-descending"></span></span>
+                        <span class="item-head item-w-4" id="percentile-system" data-sort="0" data-flag="0">加权百分制得分<span class="head-item-icon head-item-icon-default"></span></span>
+                        <span class="item-head item-w-5">学习报告</span>
+                                            </div>
+                    <ul class="learning-report-left-content">
+                                                <li data-user-id="0D68A673-1627-4B48-8C26-0B0D2D4650FC" data-show="Y" class="learning-report-left-content-selected">
+                            <span class="item-content item-w-1">1</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/0D/5800d7ba721c0ea0a4e5e8b890bf1e22.jpg?v=1663291391&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">凌睿</div>
+                                <div class="student-no">21301040236</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">206</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">88.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="832D5452-A79B-405B-9E24-9CA96903A42E" data-show="Y">
+                            <span class="item-content item-w-1">2</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/83/ff313542c96cc623bee989d5687df8fb.jpg?v=1665544861&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">钟瑞</div>
+                                <div class="student-no">21301040237</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">204</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">89.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="3D4F34A0-6E19-4D0C-98D6-4E2F66CBB582" data-show="Y">
+                            <span class="item-content item-w-1">3</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/3D/6211de793c842cbd752cc44d8ac55e2c.jpg?v=1647844818&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">赵翠萍</div>
+                                <div class="student-no">21301040239</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">204</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">88.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="0CE8BBC3-E1A2-4449-98B6-CD8A5CF23F69" data-show="Y">
+                            <span class="item-content item-w-1">4</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/0C/7c3ce7824c83ec30cc9c853678e76fed.jpg?v=1666754566&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">杨红</div>
+                                <div class="student-no">21301040218</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">202</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">86.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="8EF7C2D4-2B26-4144-A80D-4E84CEEC56F5" data-show="Y">
+                            <span class="item-content item-w-1">5</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/8E/7f108d9cb1fddf5812f278dc918f9be3.jpg?v=1665977214&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">张棠</div>
+                                <div class="student-no">21301040238</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">200</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">86.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="2A35F372-AF71-4BEF-B6E3-5A303E363263" data-show="Y">
+                            <span class="item-content item-w-1">6</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/2A/9778e2896ea5976d4752e755f223fb47.png?v=1662086981&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">龙伟贞</div>
+                                <div class="student-no">21301040240</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">200</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">87.00</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="6B1B4BC8-75BF-4460-9E4E-6A23A54E1EB5" data-show="Y">
+                            <span class="item-content item-w-1">7</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/6B/7dbc242ba752f877e73219a54be21156.jpg?v=1663717242&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">李玉琢</div>
+                                <div class="student-no">21301040241</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">199</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">86.00</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="5F00A1D3-AF0D-40DF-BEFC-055D2AEE9503" data-show="Y">
+                            <span class="item-content item-w-1">8</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/5F/d322de28f9a1ef99bb3668c8595c4834.jpg?v=1648521908&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">杨丽琪</div>
+                                <div class="student-no">21301040231</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">198</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">84.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="9F9C4FC6-C83A-4EB4-A96A-5D40161E5464" data-show="Y">
+                            <span class="item-content item-w-1">9</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/9F/e2216b3a5816f6d721f4895b5bdee9d5.jpg?v=1645600506&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">李嘉贤</div>
+                                <div class="student-no">21301040232</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">198</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">84.22</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="D50F73F7-DE0E-437B-B889-FD598FF85541" data-show="Y">
+                            <span class="item-content item-w-1">10</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/D5/87de39591a386eebf317577ba0607371.jpg?v=1632707831&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">刘东明</div>
+                                <div class="student-no">21301040217</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">196</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">82.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="31EA621F-28C2-44F5-90E1-45EE9750770B" data-show="Y">
+                            <span class="item-content item-w-1">11</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/31/a059b9b9e122d2d99938fe38d4a0cd04.jpg?v=1632404663&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">张婷</div>
+                                <div class="student-no">21301040215</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">195</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="D0EB815A-70F1-47F7-B739-61540CA025ED" data-show="Y">
+                            <span class="item-content item-w-1">12</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/D0/bf3b1a2fb155b667e410445fdbc0f97b.png?v=1632450333&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">董洲宇</div>
+                                <div class="student-no">21301040222</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">194</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">83.33</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="FB0137BC-1CEB-4619-9A77-F5A578938C7A" data-show="Y">
+                            <span class="item-content item-w-1">13</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/FB/543a48cdec4eee0569c4f76130496bf4.jpg?v=1632709212&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">蔡现丽</div>
+                                <div class="student-no">21301040223</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">194</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.11</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="3BD65A43-F9F2-4A26-ADB9-C85429749A83" data-show="Y">
+                            <span class="item-content item-w-1">14</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/3B/1b4f1fc80fde183b07823f9a97f7eb7a.jpg?v=1668670613&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">刘家男</div>
+                                <div class="student-no">21301040220</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">193</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">82.22</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="7151095E-B6FE-453F-BA8F-5506D4018AFA" data-show="Y">
+                            <span class="item-content item-w-1">15</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/71/3ddfc524764b23984299e0b8fba33481.jpg?v=1632382738&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">黄梅</div>
+                                <div class="student-no">21301040229</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">193</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="33013723-3DBD-424F-83D1-153FEF1E21D3" data-show="Y">
+                            <span class="item-content item-w-1">16</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://static-cdn-oss.mosoteach.cn/mssvc/default-avatar@2x.png" alt="">
+                                <div class="full-name">张继兰</div>
+                                <div class="student-no">21301040230</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">193</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="ED04A3D3-2F96-4FD5-A3CD-9B1D24BA3888" data-show="Y">
+                            <span class="item-content item-w-1">17</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2022/ED/7838e77f147bb9068b2be3960dd54940.jpg?v=1665813416&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">梁绍莎</div>
+                                <div class="student-no">21301040234</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">193</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="26F960DD-8F2D-4002-AC51-289B27297DB5" data-show="Y">
+                            <span class="item-content item-w-1">18</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://static-cdn-oss.mosoteach.cn/mssvc/default-avatar@2x.png" alt="">
+                                <div class="full-name">龚俊宇</div>
+                                <div class="student-no">21301040201</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">192</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">80.22</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="1EE0F46C-5183-4FD1-B32B-58786E61AA12" data-show="Y">
+                            <span class="item-content item-w-1">19</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/1E/16ebc04b7e3c30c378d093cada26807c.jpg?v=1663987167&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">李宏伟</div>
+                                <div class="student-no">21301040204</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">192</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">80.22</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="AB9C3838-3F90-47F7-9670-8F10A947A962" data-show="Y">
+                            <span class="item-content item-w-1">20</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/AB/68b94cdb43715c206a8874ac8bd7989e.png?v=1669197268&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">李梦航</div>
+                                <div class="student-no">21301040213</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">192</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">79.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="5E86C291-B3F7-4327-9A1A-906889092083" data-show="Y">
+                            <span class="item-content item-w-1">21</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/5E/8d1fc2524ccfa1e7bb08858fe3dbb5e4.png?v=1632708074&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">谷茜</div>
+                                <div class="student-no">21301040214</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">192</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.11</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="54B5793E-B176-4F62-A920-51718E258E2E" data-show="Y">
+                            <span class="item-content item-w-1">22</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/54/15bd1184168c7ae0358822d1474757b3.jpg?v=1632834854&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">蒋莹</div>
+                                <div class="student-no">21301040224</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">192</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.11</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="38301C83-043D-481C-9CF0-5139B0A3623B" data-show="Y">
+                            <span class="item-content item-w-1">23</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/38/a4394b79178b42f304aac008700ac887.jpg?v=1634004981&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">廖杨</div>
+                                <div class="student-no">21301040203</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">191</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">78.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="68679D13-DE31-410F-9DC3-17E7AEB014B4" data-show="Y">
+                            <span class="item-content item-w-1">24</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/68/0408c2c7ad667757414fc36fb2cc8f01.jpg?v=1633684457&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">龚继华</div>
+                                <div class="student-no">21301040219</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">191</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">80.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="3F3F9973-80EC-45B1-86AF-66404AD03C6B" data-show="Y">
+                            <span class="item-content item-w-1">25</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/3F/460c4d35afc88288a60d1156ff0a3801.jpg?v=1632707271&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">薛玉娇</div>
+                                <div class="student-no">21301040221</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">190</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">77.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="DA69FEC6-2F57-4D77-ADDE-CDF162A5C529" data-show="Y">
+                            <span class="item-content item-w-1">26</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/DA/0ba30c371c1af6842997e8e470ef738c.jpg?v=1662429463&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">王嘉悦</div>
+                                <div class="student-no">21301040228</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">190</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">80.22</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="C264EDEC-F4DF-476C-B043-5B2859EDA3BC" data-show="Y">
+                            <span class="item-content item-w-1">27</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/C2/000fee023bb068403505d6d2ecfc3b3c.jpg?v=1668146549&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">朱桃红</div>
+                                <div class="student-no">21301040216</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">189</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">78.44</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="CEC78185-ACA2-4BA0-8198-C8CC7E768B46" data-show="Y">
+                            <span class="item-content item-w-1">28</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://static-cdn-oss.mosoteach.cn/mssvc/default-avatar@2x.png" alt="">
+                                <div class="full-name">李浩</div>
+                                <div class="student-no">21301040202</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">188</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">78.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="B12A4ACA-0C4B-4A37-B08F-6928B5E1B740" data-show="Y">
+                            <span class="item-content item-w-1">29</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/B1/3a6853321d40cf78469a7020a0c074f4.jpg?v=1632970395&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">唐彬洋</div>
+                                <div class="student-no">21301040206</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">188</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">79.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="C6F38452-5E7D-4C64-A632-782AEF904FDB" data-show="Y">
+                            <span class="item-content item-w-1">30</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/C6/734467c85addba4ce3512d95b39c6391.jpg?v=1632707521&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">刘静</div>
+                                <div class="student-no">21301040226</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">188</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">76.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="9506B41E-36A8-4C3C-A15E-E14380B57930" data-show="Y">
+                            <span class="item-content item-w-1">31</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/95/0cced07e72b99c855e95313e85af7dad.jpg?v=1632382752&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">张秘</div>
+                                <div class="student-no">21301040233</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">187</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">78.44</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="A1ECC1D7-5025-4CBF-93AA-272C0731DA5C" data-show="Y">
+                            <span class="item-content item-w-1">32</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/A1/c79e36fc76b5691bdaffcfaf621400dd.jpg?v=1665300385&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">冉鑫</div>
+                                <div class="student-no">21301040205</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">186</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">73.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="E2D6F487-2313-4453-B2A9-623A251BC2DE" data-show="Y">
+                            <span class="item-content item-w-1">33</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/E2/49e0b10e5273bea8d1f91a8e742b4f46.jpg?v=1635834660&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">张锐鹏</div>
+                                <div class="student-no">21301040209</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">186</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">81.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="3C502473-E767-44A5-B01C-B6163889DD99" data-show="Y">
+                            <span class="item-content item-w-1">34</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/3C/8044e1eda35c69444420bca941209b64.jpg?v=1645511625&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">张贻宁</div>
+                                <div class="student-no">21301040235</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">184</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">78.44</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="284A77E4-5D77-4F9D-8D0D-5881FFE281D4" data-show="Y">
+                            <span class="item-content item-w-1">35</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/28/5c1e0a92a6e834cc491cdc547b057297.jpg?v=1645510957&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">邓玉丽</div>
+                                <div class="student-no">21301040227</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">183</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">71.89</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="3BFC3072-4C4A-4045-870E-5900E8000B96" data-show="Y">
+                            <span class="item-content item-w-1">36</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/3B/57c0dba3ff4fbc619eb2696bcfa39b4c.jpg?v=1645760852&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">侯健强</div>
+                                <div class="student-no">21301040211</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">171</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">69.33</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="45B94148-FA82-4170-B327-B754C5B80DBA" data-show="Y">
+                            <span class="item-content item-w-1">37</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2022/45/25cfa07d2de2ce6399a07aaff90c11a4.jpg?v=1661055616&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">杨洁</div>
+                                <div class="student-no">21301040210</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">168</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">62.44</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="34BE110C-14B5-42FE-A5AA-73F943FBFCE4" data-show="Y">
+                            <span class="item-content item-w-1">38</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/34/980e65b00c64472ef789fa4d85cbc425.jpg?v=1634800843&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">刘新龙</div>
+                                <div class="student-no">21301040212</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">165</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">66.67</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="E0B3C858-2B26-43E6-BC2D-FDA5D75DE9D4" data-show="Y">
+                            <span class="item-content item-w-1">39</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/E0/07d628f8d932d9cfa6a969857727f1ca.png?v=1632402852&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">汪椤菡</div>
+                                <div class="student-no">21301040225</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">163</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">63.56</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                                <li data-user-id="20CDA307-D053-4AD8-8689-606CFD9E7661" data-show="Y">
+                            <span class="item-content item-w-1">40</span>
+                            <div class="item-content item-w-2">
+                                <img class="picture-url" src="https://public-cdn-oss.mosoteach.cn/avatar/2021/20/6b2e1b94b6edbcd65cf37b0d2feaca02.jpg?v=1632749607&amp;x-oss-process=style/s200x200" alt="">
+                                <div class="full-name">陈弘瑞</div>
+                                <div class="student-no">21301040208</div>
+                            </div>
+                            <span class="item-content item-w-3 student-score">84</span>
+                            <span class="item-content item-w-4 weight-sum" data-value="111">34.00</span>
+                                                            <span class="item-content item-w-5"><a class="cant-url" target="_blank">查看</a></span>
+                                                    </li>
+                                            </ul>
+                    <!-- 没有搜索到相关结果 start -->
+                    <div class="learning-report-no-result" style="display:none;">
+                        <img src="https://static-cdn-oss.mosoteach.cn/mosoteach2/common/images/no-seaching-result.png" alt="">
+                        <p>没有搜索到相关结果</p>
+                    </div>
+                    <!-- 没有搜索到相关结果 end -->            
+                </div>
+                <div class="learning-report-right">
+                    <div class="learning-report-right-info">
+                        <img src="https://public-cdn-oss.mosoteach.cn/avatar/2021/0D/5800d7ba721c0ea0a4e5e8b890bf1e22.jpg?v=1663291391&amp;x-oss-process=style/s200x200" alt="" class="learning-report-right-info-pic">
+                        <div class="learning-report-right-info-name">凌睿</div>
+                        <div class="learning-report-right-info-no">21301040236</div>
+                    </div>
+                    <div class="learning-report-right-head">
+                        <span class="item-w-6">统计项</span>
+                        <span class="item-w-7">经验值</span>
+                        <span class="item-w-8">各项加权百分制得分
+                            <i class="annotation"></i>
+                            <span class="annotation-hint-box"><span class="annotation-arrow"></span>各项加权百分制得分=（获得的经验值/应得经验值）*该项权重<br>其中“被老师点赞加分”的应得经验值为班课中该项得分最高的学生的经验值</span>
+                        </span>
+                    </div>
+                                        <ul class="learning-report-right-content">
+                        <li>
+                            <span class="item-w-6 video">视频资源学习</span>
+                            <span class="item-w-7 video">
+                                38                            </span>
+                            <span class="item-w-8 video">
+                                0                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 res">非视频资源学习</span>
+                            <span class="item-w-7 res">
+                                22                            </span>
+                            <span class="item-w-8 res">
+                                0                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 checkin">签到</span>
+                            <span class="item-w-7 checkin">
+                                30                            </span>
+                            <span class="item-w-8 checkin">
+                                10.00                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 quiz">测试</span>
+                            <span class="item-w-7 quiz">
+                                27                            </span>
+                            <span class="item-w-8 quiz">
+                                36.00                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 qa">轻直播/讨论</span>
+                            <span class="item-w-7 qa">
+                                -                            </span>
+                            <span class="item-w-8 qa">
+                                -                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 storm">头脑风暴</span>
+                            <span class="item-w-7 storm">
+                                -                            </span>
+                            <span class="item-w-8 storm">
+                                -                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 vote">投票问卷</span>
+                            <span class="item-w-7 vote">
+                                -                            </span>
+                            <span class="item-w-8 vote">
+                                -                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 hw">作业/小组任务</span>
+                            <span class="item-w-7 hw">
+                                74                            </span>
+                            <span class="item-w-8 hw">
+                                32.89                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 skill">技能考</span>
+                            <span class="item-w-7 skill">
+                                -                            </span>
+                            <span class="item-w-8 skill">
+                                -                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 cr_perform">课堂表现</span>
+                            <span class="item-w-7 cr_perform">
+                                15                            </span>
+                            <span class="item-w-8 cr_perform">
+                                10.00                            </span>
+                        </li>
+                        <li>
+                            <span class="item-w-6 like_by_teacher">被老师点赞加分</span>
+                            <span class="item-w-7 like_by_teacher">
+                                -                            </span>
+                            <span class="item-w-8 like_by_teacher">
+                                -                            </span>
+                        </li>
+                        
+                    </ul>
+                    <div class="experience-value-prompt" style="display:none"> 
+                    TA 在已删除未回收经验值的活动和资源中还获得了 <span>0</span> 经验值 
+                    </div> 
+                                    </div>
+            </div>
+                            <div class="clear-grey"></div>
+            <!-- 设置汇总数据权重 start -->
+            <div class="weight-part">
+                    <div class="weight-part-title">
+                        <span class="square"></span>各项得分在平时成绩中的权重设置
+                        <button class="button-routine alter-weight" style="display:block">修改权重</button>
+                        <button class="button-routine history-weight-btn" style="display:inline-block">常用方案</button>
+                    </div>
+                    <div class="weight-part-hint">
+                                            你可以根据自己的教学情况设置每个统计项的权重，权重将会被应用于学生学习报告与平时成绩、导出汇总数据 Excel 表-成绩汇总页以及移动端班课成员页的挂科预警。
+                                    </div>
+                <div class="weight-setting-box">
+                    <!-- 状态一 -->
+                                            <div class="weight-hide-item" style="display:none">设置权重</div>
+                                        <!-- 状态二 -->
+                    <div class="weight-show-item" style="display:block">
+                        <div class="weight-allocation">
+                            <ul class="cl" data-weight-id="159957">
+                                <li>
+                                    <span class="weight-name">视频资源学习</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">非视频资源学习</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">签到</span>
+                                    <span class="weight-percent">10</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">测试</span>
+                                    <span class="weight-percent">40</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">轻直播/讨论</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">头脑风暴</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">投票问卷</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">作业/小组任务</span>
+                                    <span class="weight-percent">40</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">技能考</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">课堂表现</span>
+                                    <span class="weight-percent">10</span>
+                                    <span>%</span>
+                                </li>
+                                <li>
+                                    <span class="weight-name">被老师点赞加分</span>
+                                    <span class="weight-percent">0</span>
+                                    <span>%</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 修改历史权重状态 -->
+                    <div class="weight-show-alter-item" data-type="N" style="display: none;"> 
+                        <!-- 配额 --> 
+                                                    <div class="weight-proportion">权重已完全分配</div> 
+                                                <!-- <div class="weight-proportion">已分配 <em class="quota-num-1">70</em>% 权重，还可以分配 <em class="quota-num-2">30</em>%</div> 
+                        <div class="weight-proportion over-quota">已分配 <em class="quota-num-1">120</em>% 权重，还可以分配 <em class="quota-num-1">20</em>%</div> --> 
+                        <div class="weight-content"> 
+                            <ul class="weight-list cl" data-weight-id="159957"> 
+                                <li class=""> 
+                                    <div class="weight-content-left">视频资源学习</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">非视频资源学习</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">签到</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="10" value="10">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">测试</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="40" value="40">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">轻直播/讨论</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">头脑风暴</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">投票问卷</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">作业/小组任务</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="40" value="40">%</div> 
+                                </li>
+                                <li class=""> 
+                                    <div class="weight-content-left">技能考</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li>
+                                <li class=""> 
+                                    <div class="weight-content-left">课堂表现</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="10" value="10">%</div> 
+                                </li> 
+                                <li class=""> 
+                                    <div class="weight-content-left">被老师点赞加分</div> 
+                                    <div class="weight-content-right"><input type="text" class="" maxlength="3" data-value="0" value="0">%</div> 
+                                </li> 
+                            </ul> 
+                        </div> 
+                        <!-- <div class="explain-words">“期中考试” 是指在线下开展的纸质考试成绩的权重，“其他”是指在云班课以外需要记录的成绩的权重，设置权重后，需要在导出的 Excel 表中手动输入学生该项成绩，如果没有请设置 0%。</div> -->
+                        <div class="weight-btn-box"> 
+                            <button class="button-routine save-weight-pops">保存</button> 
+                            <button class="button-routine ordinary close-weight-pops">取消</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
     </body>
 </html>
