@@ -34,7 +34,7 @@ Mysql：
 
 # 版权说明
 
-Copyright ©2022 黄磊,刘晓蓉 版权所有
+Copyright ©2022 黄磊 版权所有
 
 联系邮箱：56726563@qq.com
 
